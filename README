@@ -1,0 +1,77 @@
+evyatar100, 206121543 , Evyatar Cohen
+Lioraryepaz, 206240996, Lior Paz
+
+=============================
+=  README for ex9:
+=============================
+
+first of all, we would like to focus on the given questions:
+
+1. game finish - should there be a function that checks in every loop whether
+or not the game should be finished, or should it be a signal from an existing
+function once it happens.
+eventually we chose the second option, because we wanted to prevent unnecessary
+checks.
+
+2.regarding move functions - the move method is similar in all of the classes.
+at first, we thought about including this calculation only in GameRunner class,
+and then we realized that its better to split it between the different classes
+- also because it made more sense each object should calculate its own
+movement, and also because each object contain its own self values needed for
+the calculation.
+
+3. Drawing - we tried to decide how the drawing action to the screen should be
+implemented  - either a method in GameRunner class that directly call
+screen.draw for all of the objects (made more sense because the 'screen' is an
+object of GameRunner), or a specific method to each of the object
+Types.
+Eventually, we chose that each object will draw itself, in order to
+follow up with our previous course of action - each class in charge of its own
+actions. in order to do so, each object initiated with 'screen'.
+
+
+==================
+=  Description:  =
+==================
+In that exercise we continued practicing on OOP, while creating a well
+known game - Asteroids.
+the game is built out of maim class GameRunner - we used it to create a single
+object that runs & control the game. gamerunner contain a self Screen type
+object (a blackbox we got from the staff) - only one, and on top of that screen
+the game occurs.
+in  addition to these 2 main classes, we added classic OOp classes, each for a
+different type of objects - 1 Ship that set the course of the game - need to
+win and not to die, many Asteroids - independent objects that could be
+affected by the ship & it's torpedoes, many Torpedoes - that actually depend on
+Ship object.
+The different objects work together and affect one another behind the scenes,
+in a perfect harmony you might call a simple game.
+
+we hope you will enjoy our wonderful game, its top of the art level and may the
+Force be with you!!!
+
+===============
+=  Comments:  =
+===============
+we would like you to notice the following actions we took in order to slightly
+improve the game:
+1. we have added an acceleration factor to the ship speed in order to slow
+down the acceleration rate a bit.
+2. we decided on a maximum speed to the Asteroid object
+
+also, regarding these blackbox like screen - it could be nice to try &
+implement some of these functions ourselves, to learn it - a portion of the
+graphics, or keyboard input. thx!!
+
+============================
+=  list of submitted files =
+============================
+README
+AUTHORS
+asteroids_main.py
+ship.py
+asteroid.py
+torpedo.py
+
+
+
